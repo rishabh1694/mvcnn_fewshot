@@ -1,0 +1,2 @@
+/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torchvision/transforms/transforms.py:210: UserWarning: The use of the transforms.Scale transform is deprecated, please use transforms.Resize instead.
+  warnings.warn("The use of the transforms.Scale transform is deprecated, " +

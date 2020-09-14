@@ -1,0 +1,32 @@
+/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torchvision/transforms/transforms.py:210: UserWarning: The use of the transforms.Scale transform is deprecated, please use transforms.Resize instead.
+  warnings.warn("The use of the transforms.Scale transform is deprecated, " +
+Traceback (most recent call last):
+  File "main.py", line 160, in <module>
+    model = train(base_loader, val_loader,  model, optimization, start_epoch, stop_epoch, params)
+  File "main.py", line 137, in train
+    model.train_loop(epoch, base_loader,  optimizer ) #model are called by reference, no need to return 
+  File "/home/rishabhgupta/mvcnn_fewshot/methods/meta_template.py", line 73, in train_loop
+    loss = self.set_forward_loss( x )
+  File "/home/rishabhgupta/mvcnn_fewshot/methods/protonet.py", line 33, in set_forward_loss
+    scores = self.set_forward(x)
+  File "/home/rishabhgupta/mvcnn_fewshot/methods/protonet.py", line 18, in set_forward
+    z_support, z_query  = self.parse_feature(x,is_feature)
+  File "/home/rishabhgupta/mvcnn_fewshot/methods/meta_template.py", line 45, in parse_feature
+    z_all       = self.feature.forward(x)
+  File "/home/rishabhgupta/mvcnn_fewshot/backbone.py", line 373, in forward
+    y = self.trunk(x)
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/rishabhgupta/mvcnn_fewshot/backbone.py", line 181, in forward
+    out = self.BN2(out)
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/batchnorm.py", line 81, in forward
+    exponential_average_factor, self.eps)
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/functional.py", line 1670, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 88.00 MiB (GPU 0; 10.92 GiB total capacity; 10.22 GiB already allocated; 21.50 MiB free; 124.29 MiB cached)

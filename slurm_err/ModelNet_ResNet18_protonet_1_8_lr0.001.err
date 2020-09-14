@@ -1,0 +1,26 @@
+/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torchvision/transforms/transforms.py:210: UserWarning: The use of the transforms.Scale transform is deprecated, please use transforms.Resize instead.
+  warnings.warn("The use of the transforms.Scale transform is deprecated, " +
+Traceback (most recent call last):
+  File "main.py", line 166, in <module>
+    model = train(base_loader, val_loader,  model, optimization, start_epoch, stop_epoch, params)
+  File "main.py", line 143, in train
+    model.train_loop(epoch, base_loader,  optimizer ) #model are called by reference, no need to return 
+  File "/home/rishabhgupta/mvcnn_fewshot/methods/meta_template.py", line 73, in train_loop
+    loss = self.set_forward_loss( x )
+  File "/home/rishabhgupta/mvcnn_fewshot/methods/protonet.py", line 33, in set_forward_loss
+    scores = self.set_forward(x)
+  File "/home/rishabhgupta/mvcnn_fewshot/methods/protonet.py", line 18, in set_forward
+    z_support, z_query  = self.parse_feature(x,is_feature)
+  File "/home/rishabhgupta/mvcnn_fewshot/methods/meta_template.py", line 45, in parse_feature
+    z_all       = self.feature.forward(x)
+  File "/home/rishabhgupta/mvcnn_fewshot/backbone.py", line 373, in forward
+    y = self.trunk(x)
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/rishabhgupta/mvcnn_fewshot/backbone.py", line 183, in forward
+    out = out + short_out
+RuntimeError: CUDA out of memory. Tried to allocate 522.00 MiB (GPU 0; 10.92 GiB total capacity; 10.08 GiB already allocated; 243.50 MiB free; 34.22 MiB cached)

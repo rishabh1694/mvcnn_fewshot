@@ -1,0 +1,14 @@
+/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torchvision/transforms/transforms.py:210: UserWarning: The use of the transforms.Scale transform is deprecated, please use transforms.Resize instead.
+  warnings.warn("The use of the transforms.Scale transform is deprecated, " +
+Traceback (most recent call last):
+  File "main.py", line 160, in <module>
+    model = train(base_loader, val_loader,  model, optimization, start_epoch, stop_epoch, params)
+  File "main.py", line 137, in train
+    model.train_loop(epoch, base_loader,  optimizer ) #model are called by reference, no need to return 
+  File "/home/rishabhgupta/mvcnn_fewshot/methods/meta_template.py", line 74, in train_loop
+    loss.backward()
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/tensor.py", line 150, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/rishabhgupta/miniconda3/envs/py37/lib/python3.7/site-packages/torch/autograd/__init__.py", line 99, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: CUDA out of memory. Tried to allocate 42.00 MiB (GPU 0; 10.92 GiB total capacity; 10.27 GiB already allocated; 13.50 MiB free; 79.83 MiB cached)

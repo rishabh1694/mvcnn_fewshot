@@ -1,0 +1,22 @@
+Epoch 0 | Batch 0/100 | Loss 5.915174
+Epoch 0 | Batch 10/100 | Loss 1.372302
+Epoch 0 | Batch 20/100 | Loss 0.905608
+Epoch 0 | Batch 30/100 | Loss 0.655039
+Epoch 0 | Batch 40/100 | Loss 0.548336
+Epoch 0 | Batch 50/100 | Loss 0.455587
+Epoch 0 | Batch 60/100 | Loss 0.390304
+Epoch 0 | Batch 70/100 | Loss 0.338745
+Epoch 0 | Batch 80/100 | Loss 0.298253
+Epoch 0 | Batch 90/100 | Loss 0.266359
+100 Test Acc = 81.85% +- 0.86%
+best model! save...
+Epoch 1 | Batch 0/100 | Loss 0.001449
+Epoch 1 | Batch 10/100 | Loss 0.001221
+Epoch 1 | Batch 20/100 | Loss 0.007961
+Epoch 1 | Batch 30/100 | Loss 0.006064
+Epoch 1 | Batch 40/100 | Loss 0.007765
+Epoch 1 | Batch 50/100 | Loss 0.006940
+Epoch 1 | Batch 60/100 | Loss 0.006577
+Epoch 1 | Batch 70/100 | Loss 0.006143
+Epoch 1 | Batch 80/100 | Loss 0.005643
+Epoch 1 | Batch 90/100 | Loss 0.005192
